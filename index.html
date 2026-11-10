@@ -1,0 +1,366 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1769aa">
+  <title>西中ちゃんねる</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- サイドバー -->
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-logo">西</div>
+        <div class="brand-text">
+          <strong>西中ちゃんねる</strong>
+          <span>COMMUNITY PORTAL</span>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-label">MENU</div>
+
+        <button class="nav-item active" data-page="home">
+          <span class="nav-icon">⌂</span>
+          <span>ホーム</span>
+        </button>
+
+        <button class="nav-item" data-page="board">
+          <span class="nav-icon">▤</span>
+          <span>掲示板</span>
+          <span class="nav-count">NEW</span>
+        </button>
+
+        <button class="nav-item" data-page="blog">
+          <span class="nav-icon">▧</span>
+          <span>ブログ</span>
+        </button>
+
+        <button class="nav-item" data-page="gourmet">
+          <span class="nav-icon">♨</span>
+          <span>グルメ・口コミ</span>
+        </button>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-label">COMMUNITY</div>
+
+        <button class="nav-item" data-page="news">
+          <span class="nav-icon">◉</span>
+          <span>お知らせ</span>
+        </button>
+
+        <button class="nav-item" data-page="popular">
+          <span class="nav-icon">★</span>
+          <span>人気コンテンツ</span>
+        </button>
+      </div>
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-info">
+          <div class="info-icon">i</div>
+          <div>
+            <strong>西中ちゃんねる</strong>
+            <p>みんなで作るコミュニティ</p>
+          </div>
+        </div>
+        <button class="nav-item settings-button" id="themeToggle">
+          <span class="nav-icon" id="themeIcon">☾</span>
+          <span id="themeText">ダークモード</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- メイン -->
+    <main class="main">
+
+      <!-- ヘッダー -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="menu-toggle" id="menuToggle">☰</button>
+          <div class="breadcrumb">
+            <span>西中ちゃんねる</span>
+            <span class="breadcrumb-arrow">/</span>
+            <strong id="currentPageName">ホーム</strong>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <div class="search-box">
+            <span>⌕</span>
+            <input type="search" id="searchInput" placeholder="サイト内を検索...">
+            <kbd>Enter</kbd>
+          </div>
+
+          <button class="header-icon" id="notificationButton" title="お知らせ">♧</button>
+
+          <button class="user-button" id="userButton">
+            <div class="user-avatar">G</div>
+            <span>ゲスト</span>
+            <span class="user-arrow">⌄</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- コンテンツ -->
+      <div class="content" id="content">
+
+        <!-- HOME -->
+        <section class="page active" id="page-home">
+
+          <div class="welcome-banner">
+            <div class="welcome-content">
+              <div class="welcome-tag">WELCOME TO NISHICHU</div>
+              <h1>西中ちゃんねるへようこそ。</h1>
+              <p>学校生活をもっと楽しく。みんなでつながるコミュニティ。</p>
+              <button class="welcome-button" data-go="board">
+                掲示板を見てみる <span>→</span>
+              </button>
+            </div>
+            <div class="welcome-decoration">
+              <div class="decoration-circle circle-one"></div>
+              <div class="decoration-circle circle-two"></div>
+              <div class="decoration-text">N</div>
+            </div>
+          </div>
+
+          <div class="section-heading">
+            <div>
+              <h2>サイトメニュー</h2>
+              <p>西中ちゃんねるのコンテンツ</p>
+            </div>
+          </div>
+
+          <div class="feature-grid">
+
+            <button class="feature-card" data-go="board">
+              <div class="feature-icon icon-blue">▤</div>
+              <div class="feature-text">
+                <h3>掲示板</h3>
+                <p>自由に話そう。みんなの交流スペース。</p>
+              </div>
+              <span class="feature-arrow">→</span>
+            </button>
+
+            <button class="feature-card" data-go="blog">
+              <div class="feature-icon icon-purple">▧</div>
+              <div class="feature-text">
+                <h3>ブログ</h3>
+                <p>日常や出来事を記事にして共有。</p>
+              </div>
+              <span class="feature-arrow">→</span>
+            </button>
+
+            <button class="feature-card" data-go="gourmet">
+              <div class="feature-icon icon-orange">♨</div>
+              <div class="feature-text">
+                <h3>グルメ・口コミ</h3>
+                <p>おすすめのお店や食べ物を紹介。</p>
+              </div>
+              <span class="feature-arrow">→</span>
+            </button>
+
+            <button class="feature-card" data-go="news">
+              <div class="feature-icon icon-green">◉</div>
+              <div class="feature-text">
+                <h3>お知らせ</h3>
+                <p>サイトの最新情報をチェック。</p>
+              </div>
+              <span class="feature-arrow">→</span>
+            </button>
+
+          </div>
+
+          <div class="home-columns">
+
+            <div class="panel">
+              <div class="panel-header">
+                <div>
+                  <h2>最新のお知らせ</h2>
+                  <p>サイトからのお知らせ</p>
+                </div>
+                <button class="text-link" data-go="news">すべて見る →</button>
+              </div>
+
+              <div class="announcement-list">
+                <div class="announcement">
+                  <span class="announcement-badge badge-important">INFO</span>
+                  <div class="announcement-content">
+                    <strong>新しい西中ちゃんねるが始動！</strong>
+                    <span>新しいコミュニティサイトのベースを公開しました。</span>
+                  </div>
+                  <time>NEW</time>
+                </div>
+
+                <div class="announcement">
+                  <span class="announcement-badge badge-normal">NEWS</span>
+                  <div class="announcement-content">
+                    <strong>コンテンツ準備中</strong>
+                    <span>掲示板・ブログ・グルメ機能を順次追加予定です。</span>
+                  </div>
+                  <time>INFO</time>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel activity-panel">
+              <div class="panel-header">
+                <div>
+                  <h2>サイト情報</h2>
+                  <p>現在のコンテンツ状況</p>
+                </div>
+              </div>
+
+              <div class="stat-list">
+                <div class="stat-item">
+                  <div class="stat-icon">▤</div>
+                  <div>
+                    <span>掲示板</span>
+                    <strong>準備中</strong>
+                  </div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-icon">▧</div>
+                  <div>
+                    <span>ブログ</span>
+                    <strong>準備中</strong>
+                  </div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-icon">♨</div>
+                  <div>
+                    <span>グルメ</span>
+                    <strong>準備中</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="footer">
+            <span>© 西中ちゃんねる</span>
+            <span>COMMUNITY PORTAL</span>
+          </div>
+
+        </section>
+
+        <!-- 掲示板 -->
+        <section class="page" id="page-board">
+          <div class="page-heading">
+            <div>
+              <div class="eyebrow">COMMUNITY</div>
+              <h1>掲示板</h1>
+              <p>みんなで自由に話せる交流スペース。</p>
+            </div>
+            <span class="coming-badge">COMING SOON</span>
+          </div>
+
+          <div class="empty-state">
+            <div class="empty-icon">▤</div>
+            <h2>掲示板は準備中です</h2>
+            <p>スレッド作成・返信・いいねなどの機能を追加予定です。</p>
+          </div>
+        </section>
+
+        <!-- ブログ -->
+        <section class="page" id="page-blog">
+          <div class="page-heading">
+            <div>
+              <div class="eyebrow">ARTICLES</div>
+              <h1>ブログ</h1>
+              <p>日常や出来事を記事にして共有しよう。</p>
+            </div>
+            <span class="coming-badge">COMING SOON</span>
+          </div>
+
+          <div class="empty-state">
+            <div class="empty-icon">▧</div>
+            <h2>ブログは準備中です</h2>
+            <p>記事の投稿・編集・コメント機能などを追加予定です。</p>
+          </div>
+        </section>
+
+        <!-- グルメ -->
+        <section class="page" id="page-gourmet">
+          <div class="page-heading">
+            <div>
+              <div class="eyebrow">GOURMET & REVIEW</div>
+              <h1>グルメ・口コミ</h1>
+              <p>おすすめのお店や食べ物をみんなで紹介しよう。</p>
+            </div>
+            <span class="coming-badge">COMING SOON</span>
+          </div>
+
+          <div class="empty-state">
+            <div class="empty-icon">♨</div>
+            <h2>グルメ機能は準備中です</h2>
+            <p>お店の紹介・写真・評価・口コミ機能などを追加予定です。</p>
+          </div>
+        </section>
+
+        <!-- お知らせ -->
+        <section class="page" id="page-news">
+          <div class="page-heading">
+            <div>
+              <div class="eyebrow">INFORMATION</div>
+              <h1>お知らせ</h1>
+              <p>西中ちゃんねるの最新情報。</p>
+            </div>
+          </div>
+
+          <div class="panel news-panel">
+            <div class="announcement-list">
+              <div class="announcement">
+                <span class="announcement-badge badge-important">INFO</span>
+                <div class="announcement-content">
+                  <strong>新しい西中ちゃんねるが始動！</strong>
+                  <span>新しいコミュニティサイトのベースを公開しました。</span>
+                </div>
+                <time>NEW</time>
+              </div>
+              <div class="announcement">
+                <span class="announcement-badge badge-normal">NEWS</span>
+                <div class="announcement-content">
+                  <strong>コンテンツ準備中</strong>
+                  <span>各種機能を順次追加予定です。</span>
+                </div>
+                <time>INFO</time>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 人気コンテンツ -->
+        <section class="page" id="page-popular">
+          <div class="page-heading">
+            <div>
+              <div class="eyebrow">RANKING</div>
+              <h1>人気コンテンツ</h1>
+              <p>みんなに人気のコンテンツをチェック。</p>
+            </div>
+          </div>
+
+          <div class="empty-state">
+            <div class="empty-icon">★</div>
+            <h2>ランキングは準備中です</h2>
+            <p>投稿や閲覧データをもとにランキングを表示する予定です。</p>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
