@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1769aa">
+  <title>ログイン - 西中ちゃんねる</title>
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+  <div class="auth-background">
+    <div class="bg-circle bg-circle-1"></div>
+    <div class="bg-circle bg-circle-2"></div>
+    <div class="bg-circle bg-circle-3"></div>
+  </div>
+
+  <main class="auth-wrapper">
+
+    <a href="index.html" class="back-home">
+      <span>←</span> ホームに戻る
+    </a>
+
+    <div class="auth-brand">
+      <div class="brand-logo">西</div>
+      <div>
+        <h1>西中ちゃんねる</h1>
+        <span>COMMUNITY PORTAL</span>
+      </div>
+    </div>
+
+    <section class="auth-card">
+
+      <div class="auth-heading">
+        <div class="auth-eyebrow">WELCOME BACK</div>
+        <h2 id="formTitle">おかえりなさい。</h2>
+        <p id="formDescription">
+          アカウントにログインしてください。
+        </p>
+      </div>
+
+      <!-- タブ -->
+      <div class="auth-tabs">
+        <button class="auth-tab active" id="loginTab" type="button">
+          ログイン
+        </button>
+        <button class="auth-tab" id="registerTab" type="button">
+          新規登録
+        </button>
+      </div>
+
+      <!-- ログインフォーム -->
+      <form id="loginForm" class="auth-form">
+
+        <div class="form-group">
+          <label for="loginEmail">メールアドレス</label>
+          <input
+            type="email"
+            id="loginEmail"
+            placeholder="example@email.com"
+            autocomplete="email"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="loginPassword">パスワード</label>
+
+          <div class="password-wrapper">
+            <input
+              type="password"
+              id="loginPassword"
+              placeholder="パスワードを入力"
+              autocomplete="current-password"
+              required
+            >
+            <button
+              type="button"
+              class="password-toggle"
+              data-target="loginPassword"
+            >表示</button>
+          </div>
+        </div>
+
+        <button class="submit-button" type="submit" id="loginSubmit">
+          ログイン <span>→</span>
+        </button>
+
+        <div class="form-message" id="loginMessage" role="status"></div>
+
+        <p class="switch-text">
+          アカウントを持っていませんか？
+          <button type="button" class="inline-link" data-switch="register">
+            新規登録
+          </button>
+        </p>
+
+      </form>
+
+      <!-- 新規登録フォーム -->
+      <form id="registerForm" class="auth-form hidden">
+
+        <div class="form-group">
+          <label for="registerUsername">ユーザー名</label>
+          <input
+            type="text"
+            id="registerUsername"
+            placeholder="ユーザー名を入力"
+            minlength="2"
+            maxlength="20"
+            autocomplete="nickname"
+            required
+          >
+          <small>2〜20文字で入力してください。</small>
+        </div>
+
+        <div class="form-group">
+          <label for="registerEmail">メールアドレス</label>
+          <input
+            type="email"
+            id="registerEmail"
+            placeholder="example@email.com"
+            autocomplete="email"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="registerPassword">パスワード</label>
+
+          <div class="password-wrapper">
+            <input
+              type="password"
+              id="registerPassword"
+              placeholder="8文字以上"
+              minlength="8"
+              autocomplete="new-password"
+              required
+            >
+            <button
+              type="button"
+              class="password-toggle"
+              data-target="registerPassword"
+            >表示</button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">パスワード（確認）</label>
+
+          <div class="password-wrapper">
+            <input
+              type="password"
+              id="confirmPassword"
+              placeholder="もう一度入力"
+              autocomplete="new-password"
+              required
+            >
+            <button
+              type="button"
+              class="password-toggle"
+              data-target="confirmPassword"
+            >表示</button>
+          </div>
+        </div>
+
+        <label class="agreement">
+          <input type="checkbox" id="agreeTerms" required>
+          <span>
+            <a href="#" id="termsLink">利用規約</a>に同意します。
+          </span>
+        </label>
+
+        <button class="submit-button" type="submit" id="registerSubmit">
+          アカウントを作成 <span>→</span>
+        </button>
+
+        <div class="form-message" id="registerMessage" role="status"></div>
+
+        <p class="switch-text">
+          すでにアカウントをお持ちですか？
+          <button type="button" class="inline-link" data-switch="login">
+            ログイン
+          </button>
+        </p>
+
+      </form>
+
+      <div class="auth-divider">
+        <span>西中ちゃんねる</span>
+      </div>
+
+      <p class="auth-footer">
+        みんなでつながるコミュニティ。
+      </p>
+
+    </section>
+
+    <p class="copyright">
+      © 西中ちゃんねる. All rights reserved.
+    </p>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="auth.js"></script>
+
+</body>
+</html>
